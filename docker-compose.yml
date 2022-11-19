@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  mysql-database:
+    restart: always
+    image: mysql:5.6
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: pass
+      MYSQL_DATABASE: user_db
+      MYSQL_USER: Harit
+      MYSQL_PASSWORD: Harit1273#
+      MYSQL_ROOT_HOST: '%'
+    volumes:
+      - ./blogging_db:/var/lib/mysql
